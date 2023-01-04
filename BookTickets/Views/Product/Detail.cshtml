@@ -1,0 +1,85 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<BookTickets.Models.Movie>
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="~/NewFolder/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="~/NewFolder/css/mdb.min.css" rel="stylesheet">
+<!-- Your custom styles (optional) -->
+<link href="~/NewFolder/css/style.min.css" rel="stylesheet">
+
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+        <h1>Danh sách phim</h1>
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <img src="/asset/img/offers/onepiece.jpg" class="img-fluid" alt="Naruto">
+
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <!--Content-->
+                <div class="p-4">
+
+                    <div class="mb-3">
+                        <a href="">
+                            <span class="badge blue mr-1">New</span>
+                        </a>
+
+                    </div>
+
+                    <label for="thoigian">Lịch chiếu (date and time):</label>
+                    <input type="datetime-local" id="birthdaytime" name="shơtime">
+
+                    <p class="lead font-weight-bold">One Piece</p>
+
+                    <ul>
+                        <li>Nước sản xuất: Nhật bản</li>
+                        <li>Năm sản xuất: 2019</li>
+                        <li>Thời lượng: 1tiếng 30 phút</li>
+                    </ul>
+
+                    <form class="d-flex justify-content-left">
+                        <!-- Default input -->
+                        <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+                        <h4>Vé</h4>
+                    </form>
+                    <br />
+                    <p class="lead">
+                        <span>50000 vnđ</span>
+                    </p>
+                    <a asp-controller="OderController1" asp-action="Index">
+                        Đặt vé
+                        <i class="fas fa-shopping-cart ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="~/NewFolder/js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="~/NewFolder/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="~/NewFolder/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="~/NewFolder/js/mdb.min.js"></script>

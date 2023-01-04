@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BookTickets.Models.Showtime>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content" style="height:max-content; width:max-content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">Lịch chiếu</h1>
+            <p>
+                <a asp-action="Create">Create New</a>
+            </p>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Dữ liệu</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên phim</th>
+                                    <th>Tên phòng</th>
+                                    <th>Thời gian chiếu</th>
+                                    <th>Giá vé</th>
+                                    <th>  </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <th scope="row">@item.IdShowtime</th>
+                                            <td>@item.IdMovieNavigation.NameMovie</td>
+                                            <td>@item.IdRoomNavigation.TenPhong</td>
+                                            <td>@item.Thoigianchieu</td>
+                                            <td>@item.Price</td>
+
+                                            <td>
+                                                <a class="btn btn-warning btn-circle btn-sm" asp-controller="AdminShowtimes" asp-action="Edit" asp-route-id="@item.IdShowtime">Edit</a>
+                                                <a class="btn btn-danger btn-circle btn-sm" asp-controller="AdminShowtimes" asp-action="Delete" asp-route-id="@item.IdShowtime">Delete</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

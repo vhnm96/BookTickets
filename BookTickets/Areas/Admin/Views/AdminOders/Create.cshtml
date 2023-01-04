@@ -1,0 +1,40 @@
+﻿@model BookTickets.Models.Oder
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Oder</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" style="height:max-content; width:max-content">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Dathanhtoan" class="control-label"></label>
+                <input asp-for="Dathanhtoan" class="form-control" />
+                <span asp-validation-for="Dathanhtoan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ngaydat" class="control-label"></label>
+                <input asp-for="Ngaydat" class="form-control" />
+                <span asp-validation-for="Ngaydat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaKh" class="control-label"></label>
+                <select asp-for="MaKh" class ="form-control" asp-items="ViewBag.MaKh"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

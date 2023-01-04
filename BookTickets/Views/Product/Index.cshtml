@@ -1,0 +1,141 @@
+﻿@model IEnumerable<BookTickets.Models.Movie>
+
+@{
+    ViewData["Title"] = "Danh sách phim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="offers_area" style="margin-top:100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/onepiece.jpg">
+                    </div>
+                    <h3>
+                        One Piece <br />
+                    </h3>
+                    <ul>
+                        <li>Nước sản xuất: Nhật bản</li>
+                        <li>Năm sản xuất: 2019</li>
+                        <li>Thời lượng: 1tiếng 30 phút</li>
+                    </ul>
+                    <a asp-controller="Product" asp-action="Detail" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/bogia.jpg" alt="">
+                    </div>
+                    <h3>
+                        Bố Già
+                    </h3>
+                    <ul>
+                        <li>Nước sản xuất: Việt Nam</li>
+                        <li>Năm sản xuất: 2019</li>
+                        <li>Thời lượng: 1tiếng 45 phút</li>
+                    </ul>
+                    <a asp-controller="Product" asp-action="Detail" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/naruto.png" alt="">
+                    </div>
+                    <h3>
+                        Naruto
+                    </h3>
+                    <ul>
+                        <li>Nước sản xuất: Việt Nam</li>
+                        <li>Năm sản xuất: 2019</li>
+                        <li>Thời lượng: 1tiếng 45 phút</li>
+                    </ul>
+                    <a asp-controller="Product" asp-action="Detail" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top:30px;">
+        <div class="row">
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/live-1.jpg" alt="">
+                    </div>
+                    <h3>
+                        Spirited Away <br /> 
+                        Vùng Đất Linh Hồn (2001)
+                    </h3>
+                    <a asp-controller="Home" asp-action="Datve" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/live-2.jpg" alt="">
+                    </div>
+                    <h3>
+                        Howl's Moving Castle <br />
+                        Lâu Đài Di Động Của Pháp Sư
+                    </h3>
+                    <a href="#" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/live-3.jpg" alt="">
+                    </div>
+                    <h3>
+                        Tonari no Totoro <br />
+                        Hàng Xóm Của Tôi Là Totoro
+                    </h3>
+                    <a href="#" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="container" style="margin-top:30px;">
+        <div class="row">
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/live-4.jpg" alt="">
+                    </div>
+                    <h3>
+                        5 Centimeters Per Second <br />
+                        5 Centimet Trên Giây
+                    </h3>
+                    <a asp-controller="Home" asp-action="Datve" class="book_now">đặt vé</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/live-5.jpg" alt="">
+                    </div>
+                    <h3>
+                        A Letter To Momo <br />
+                        Lá Thư Gửi Momo (2011)
+                    </h3>
+                    <a href="#" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4">
+                <div class="single_offers">
+                    <div class="about_thumb">
+                        <img src="~/asset/img/offers/live-6.jpg" alt="">
+                    </div>
+                    <h3>
+                        The Wind Rises <br />
+                        Gió Nổi (2013)
+                    </h3>
+                    <a href="#" class="book_now">Đặt vé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

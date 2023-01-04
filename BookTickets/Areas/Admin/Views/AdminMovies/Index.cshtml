@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BookTickets.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">Danh sách phim</h1>
+            <p>
+                <a asp-action="Create">Create New</a>
+            </p>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Dữ liệu</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên Phim</th>
+                                    <th>Mô Tả</th>
+                                    <th>Ảnh bìa</th>
+                                    <th>Thể loại</th>
+                                    <th>  </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                <tr>
+                                    <th scope="row">@item.IdMovie</th>
+                                    <td>@item.NameMovie</td>
+                                    <td>@item.Mota</td>
+                                    <td>@item.Anhbia</td>
+                                    <td>@item.IdCategoryNavigation.NameCategory</td>
+                                    <td>
+                                        <a class="btn btn-warning btn-circle btn-sm" asp-controller="AdminMovies" asp-action="Edit" asp-route-id="@item.IdMovie">Edit</a>
+                                        <a class="btn btn-danger btn-circle btn-sm" asp-controller="AdminMovies" asp-action="Delete" asp-route-id="@item.IdMovie">Delete</a>
+                                    </td>
+                                </tr>
+
+                                    }
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
